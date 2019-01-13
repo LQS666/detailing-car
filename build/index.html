@@ -14,16 +14,48 @@
 </head>
 
 <body>
-
+    <header>
+        <nav>
+            <div class="hamburger">
+                <i class="ham-icon fas fa-bars"></i>
+            </div>
+            <div class="nav-ham">
+                <ul class="nav-ham-list">
+                    <li><a href="#" id="home">Strona główna</a></li>
+                    <li><a href="" id="home">Realizacje</a></li>
+                    <li><a href="" id="home">Oferta</a></li>
+                    <li><a href="" id="home">O nas</a></li>
+                    <li><a href="" id="home">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="main-nav">
+                <ul class="main-nav-list">
+                    <li class="main-nav-item current-menu-item">
+                        <a href="#" id="home">Strona główna</a>
+                        <div class="menu-sel"></div>
+                    </li>
+                    <li class="main-nav-item"><a href="#" id="home">Realizacje</a></li>
+                    <li class="main-nav-item"><a href="#" id="home">Oferta</a></li>
+                    <li class="main-nav-item"><a href="#" id="home">O nas</a></li>
+                    <li class="main-nav-item"><a href="#" id="home">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <div class="section-hero">
         <div class="container">
             <h1><span class="logo">Detailing Car</span> Studio</h1>
             <h2>Auto Detailing</h2>
             <p>Najwyższej klasy kosmetyka samochodowa</p>
-            <a href="" class="btn">Kontakt</a>
+            <div class="hero-btns">
+                <a href="" class="btn">Realizacje <i class="fas fa-caret-right"></i></a>
+                <a href="" class="btn btn-kon">Kontakt <i class="fas fa-phone"></i></a>
+            </div>
         </div>
     </div>
+
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

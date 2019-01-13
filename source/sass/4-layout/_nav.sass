@@ -1,0 +1,94 @@
+body.menu_open
+    overflow: hidden
+header
+    width: 100%
+    font-family: 'Open Sans', sans-serif
+    nav 
+        .main-nav
+            position: fixed
+            width: 100%
+            background-color: #fff
+            z-index: 1
+            top: 0
+            left: 0
+            right: 0
+            .main-nav-list
+                display: flex
+                justify-content: center
+                list-style-type: none
+                margin: 0
+                padding: 0
+                .main-nav-item
+                    position: relative
+                    cursor: pointer
+                    a   
+                        padding: 20px
+                        display: block
+                        color: #232323
+                        text-align: center
+                        text-transform: uppercase
+                        font-size: 12px
+                        &:hover
+                            color: #002b75
+                    .menu-sel
+                        position: absolute
+                        height: 2px
+                        width: 100%
+                        background-color: #002b75
+                        left: 0
+                        bottom: 5px
+                        transition: .75s
+                .current-menu-item
+                    a 
+                        color: #002b75
+        @media screen and (max-width: 580px)
+            .main-nav
+                display: none
+        .hamburger
+            display: none
+            position: fixed
+            right: 0
+            color: #fff
+            padding: 30px
+            border-left: 1px solid rgba(255,255,255,.3)
+            z-index: 2
+            i
+                font-size: 28px
+                cursor: pointer
+                display: block
+                
+        @media screen and (max-width: 580px)
+                .hamburger
+                    display: block
+        .nav-ham
+            width: 100%
+            height: 100%
+            display: none
+            position: fixed
+            opacity: 0
+            z-index: 1
+            background: rgba(0,0,0,.85)
+            transition: .25s
+            margin: 0
+            padding: 0
+        .open
+            display: block
+            opacity: 1
+            .nav-ham-list
+                position: relative
+                text-align: center
+                list-style-type: none
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                margin: 0
+                padding: 0
+                li 
+                    a
+                        display: block
+                        font-size: 4em
+                        color: #fff 
+                        padding: 18px
+        @media screen and (max-width: 580px)
+            display: block
+                
