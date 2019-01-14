@@ -316,25 +316,18 @@ header {
       header nav .main-nav .main-nav-list .main-nav-item {
         position: relative;
         cursor: pointer; }
-        header nav .main-nav .main-nav-list .main-nav-item a {
+        header nav .main-nav .main-nav-list .main-nav-item .main-nav-item-a {
           padding: 20px;
           display: block;
           color: #232323;
           text-align: center;
           text-transform: uppercase;
           font-size: 12px; }
-          header nav .main-nav .main-nav-list .main-nav-item a:hover {
+          header nav .main-nav .main-nav-list .main-nav-item .main-nav-item-a:hover {
             color: #002b75; }
-        header nav .main-nav .main-nav-list .main-nav-item .menu-sel {
-          position: absolute;
-          height: 2px;
-          width: 100%;
-          background-color: #002b75;
-          left: 0;
-          bottom: 5px;
-          transition: .75s; }
-      header nav .main-nav .main-nav-list .current-menu-item a {
-        color: #002b75; }
+        header nav .main-nav .main-nav-list .main-nav-item .selected-a {
+          background: #e74c3c;
+          color: #fff; }
   @media screen and (max-width: 580px) {
     header nav .main-nav {
       display: none; } }
@@ -432,3 +425,6 @@ header {
       .section-hero .container a.btn.btn-kon:hover {
         color: #fff;
         background: #000; }
+
+.section {
+  height: 100vh; }

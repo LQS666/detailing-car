@@ -21,7 +21,7 @@ header
                 .main-nav-item
                     position: relative
                     cursor: pointer
-                    a   
+                    .main-nav-item-a   
                         padding: 20px
                         display: block
                         color: #232323
@@ -30,17 +30,9 @@ header
                         font-size: 12px
                         &:hover
                             color: #002b75
-                    .menu-sel
-                        position: absolute
-                        height: 2px
-                        width: 100%
-                        background-color: #002b75
-                        left: 0
-                        bottom: 5px
-                        transition: .75s
-                .current-menu-item
-                    a 
-                        color: #002b75
+                    .selected-a
+                        background: #e74c3c
+                        color: #fff
         @media screen and (max-width: 580px)
             .main-nav
                 display: none
