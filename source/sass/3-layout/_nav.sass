@@ -8,7 +8,7 @@ header
             position: fixed
             width: 100%
             background-color: #fff
-            z-index: 1
+            z-index: 10
             top: 0
             left: 0
             right: 0
@@ -21,18 +21,42 @@ header
                 .main-nav-item
                     position: relative
                     cursor: pointer
-                    .main-nav-item-a   
+                    .main-nav-item-a
+                        position: relative
                         padding: 20px
                         display: block
                         color: #232323
                         text-align: center
                         text-transform: uppercase
                         font-size: 12px
+                        transition: .4s linear
+                        &::before
+                            position: absolute
+                            content: ""
+                            bottom: 0
+                            left: 0
+                            width: 0%
+                            height: 6%
+                            background: #e74c3c
+                            transition: .15s linear
                         &:hover
+                            background: #ecf0f1
                             color: #002b75
+                        &:hover::before
+                            width: 100%
                     .selected-a
-                        background: #e74c3c
-                        color: #fff
+                        position: relative
+                        display: block
+                        background: #ecf0f1
+                        &::before
+                            position: absolute
+                            content: ""
+                            bottom: 0
+                            left: 0
+                            width: 100%
+                            height: 6%
+                            background: #e74c3c
+                            transition: .5s
         @media screen and (max-width: 580px)
             .main-nav
                 display: none
@@ -43,7 +67,7 @@ header
             color: #fff
             padding: 30px
             border-left: 1px solid rgba(255,255,255,.3)
-            z-index: 2
+            z-index: 11
             i
                 font-size: 28px
                 cursor: pointer
@@ -58,7 +82,7 @@ header
             display: none
             position: fixed
             opacity: 0
-            z-index: 1
+            z-index: 10
             background: rgba(0,0,0,.85)
             transition: .25s
             margin: 0

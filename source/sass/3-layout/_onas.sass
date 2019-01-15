@@ -1,0 +1,46 @@
+.section-about 
+    background: #1f1f1f
+    height: 100%
+    margin: 0
+    padding: 0
+    border-top: 1px solid #7f8c8d
+    h2 
+        font-weight: 600
+        margin: 0
+        padding-top: 100px
+        padding-bottom: 40px
+        color: #ffffff
+        font-size: 26px
+        text-align: center
+    .owner-box 
+        display: flex
+        flex-direction: column
+        padding-bottom: 50px
+        .owner-img
+            flex-basis: 30%
+            img    
+                width: 100%
+                background-clip: cover
+        .owner-text
+            flex-basis: 70%
+            padding: 20px
+            p 
+                width: 100%
+                color: #fff
+    @media screen and (min-width: 700px)
+        .owner-box
+            flex-direction: row
+
+.section-quote
+    background: #ecf0f1
+    padding-top: 40px
+    padding-bottom: 30px
+    .quote
+        text-align: center
+        display: block
+        p 
+            font-size: 18px
+            font-weight: 600
+            span 
+                font-size: 12px
+                font-style: italic

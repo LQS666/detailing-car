@@ -194,7 +194,8 @@ body {
   font-size: 14px;
   color: black;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Open Sans', sans-serif; }
 
 .container {
   width: 100%;
@@ -206,14 +207,14 @@ section {
   display: -webkit-box; }
 
 a {
-  color: #0074D9;
+  color: #000;
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
-    color: #F012BE; }
+    color: #FFF498; }
 
 ::selection {
-  background: #FFF498; }
+  background: #e74c3c; }
 
 ::-moz-selection {
   background: #FFF498; }
@@ -303,7 +304,7 @@ header {
     position: fixed;
     width: 100%;
     background-color: #fff;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     left: 0;
     right: 0; }
@@ -317,17 +318,41 @@ header {
         position: relative;
         cursor: pointer; }
         header nav .main-nav .main-nav-list .main-nav-item .main-nav-item-a {
+          position: relative;
           padding: 20px;
           display: block;
           color: #232323;
           text-align: center;
           text-transform: uppercase;
-          font-size: 12px; }
+          font-size: 12px;
+          transition: .4s linear; }
+          header nav .main-nav .main-nav-list .main-nav-item .main-nav-item-a::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 6%;
+            background: #e74c3c;
+            transition: .15s linear; }
           header nav .main-nav .main-nav-list .main-nav-item .main-nav-item-a:hover {
+            background: #ecf0f1;
             color: #002b75; }
+          header nav .main-nav .main-nav-list .main-nav-item .main-nav-item-a:hover::before {
+            width: 100%; }
         header nav .main-nav .main-nav-list .main-nav-item .selected-a {
-          background: #e74c3c;
-          color: #fff; }
+          position: relative;
+          display: block;
+          background: #ecf0f1; }
+          header nav .main-nav .main-nav-list .main-nav-item .selected-a::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6%;
+            background: #e74c3c;
+            transition: .5s; }
   @media screen and (max-width: 580px) {
     header nav .main-nav {
       display: none; } }
@@ -338,7 +363,7 @@ header {
     color: #fff;
     padding: 30px;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: 2; }
+    z-index: 11; }
     header nav .hamburger i {
       font-size: 28px;
       cursor: pointer;
@@ -352,7 +377,7 @@ header {
     display: none;
     position: fixed;
     opacity: 0;
-    z-index: 1;
+    z-index: 10;
     background: rgba(0, 0, 0, 0.85);
     transition: .25s;
     margin: 0;
@@ -384,9 +409,19 @@ header {
   margin: 0;
   padding: 0;
   overflow-y: hidden;
-  background: url("../img/6.jpeg") 50% 50% no-repeat;
-  background-size: cover; }
+  background: url("../img/6.jpeg") 50% 50% no-repeat fixed;
+  background-size: cover;
+  position: relative; }
+  .section-hero::before {
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.12);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; }
   .section-hero .container {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -408,23 +443,63 @@ header {
     .section-hero .container .hero-btns {
       display: flex; }
     .section-hero .container a.btn {
+      z-index: 2;
       border: 1px solid #fff;
       transition: .2s;
       display: block;
-      padding: 5px 20px;
+      padding: 8px 25px;
       margin: 0 5px;
       color: #fff;
       text-transform: uppercase;
+      font-size: 12px;
       font-family: 'Open Sans', sans-serif; }
       .section-hero .container a.btn:hover {
         color: #000;
         background: #fff; }
-    .section-hero .container a.btn.btn-kon {
-      color: #000;
-      background: #fff; }
-      .section-hero .container a.btn.btn-kon:hover {
-        color: #fff;
-        background: #000; }
 
-.section {
-  height: 100vh; }
+.section-about {
+  background: #1f1f1f;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #7f8c8d; }
+  .section-about h2 {
+    font-weight: 600;
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    color: #ffffff;
+    font-size: 26px;
+    text-align: center; }
+  .section-about .owner-box {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px; }
+    .section-about .owner-box .owner-img {
+      flex-basis: 30%; }
+      .section-about .owner-box .owner-img img {
+        width: 100%;
+        background-clip: cover; }
+    .section-about .owner-box .owner-text {
+      flex-basis: 70%;
+      padding: 20px; }
+      .section-about .owner-box .owner-text p {
+        width: 100%;
+        color: #fff; }
+  @media screen and (min-width: 700px) {
+    .section-about .owner-box {
+      flex-direction: row; } }
+
+.section-quote {
+  background: #ecf0f1;
+  padding-top: 40px;
+  padding-bottom: 30px; }
+  .section-quote .quote {
+    text-align: center;
+    display: block; }
+    .section-quote .quote p {
+      font-size: 18px;
+      font-weight: 600; }
+      .section-quote .quote p span {
+        font-size: 12px;
+        font-style: italic; }
