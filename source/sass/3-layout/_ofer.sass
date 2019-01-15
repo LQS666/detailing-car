@@ -1,0 +1,43 @@
+.section-ofer 
+    background: #fff
+    height: 100%
+    margin: 0
+    padding: 0
+    padding-bottom: 50px
+    border-top: 1px solid #7f8c8d
+    border-bottom: 1px solid #7f8c8d
+    h2 
+        font-weight: 600
+        margin: 0
+        padding-top: 120px
+        padding-bottom: 40px
+        color: #000
+        font-size: 26px
+        text-align: center
+    p   
+        text-align: center
+    .ofer-box
+        padding-bottom: 30px
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-around
+        .ofer-item
+            flex-basis: 29%
+            margin-top: 30px
+            h3 
+                text-transform: uppercase
+                font-size: 19px
+                text-align: center
+                font-weight: 600
+                color: #7f8c8d
+            p 
+                line-height: 24px
+                text-align: justify
+                text-justify: inter-word
+        @media screen and (max-width: 1080px)
+            .ofer-item
+                flex-basis: 44%
+        @media screen and (max-width: 700px)
+            .ofer-item
+                flex-basis: 100%

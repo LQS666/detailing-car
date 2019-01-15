@@ -307,7 +307,8 @@ header {
     z-index: 10;
     top: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    box-shadow: 0 0 10px 1px #353b48; }
     header nav .main-nav .main-nav-list {
       display: flex;
       justify-content: center;
@@ -481,6 +482,8 @@ header {
         width: 100%;
         background-clip: cover; }
     .section-about .owner-box .owner-text {
+      text-align: justify;
+      text-justify: inter-word;
       flex-basis: 70%;
       padding: 20px; }
       .section-about .owner-box .owner-text p {
@@ -503,3 +506,47 @@ header {
       .section-quote .quote p span {
         font-size: 12px;
         font-style: italic; }
+
+.section-ofer {
+  background: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 50px;
+  border-top: 1px solid #7f8c8d;
+  border-bottom: 1px solid #7f8c8d; }
+  .section-ofer h2 {
+    font-weight: 600;
+    margin: 0;
+    padding-top: 120px;
+    padding-bottom: 40px;
+    color: #000;
+    font-size: 26px;
+    text-align: center; }
+  .section-ofer p {
+    text-align: center; }
+  .section-ofer .ofer-box {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .section-ofer .ofer-box .ofer-item {
+      flex-basis: 29%;
+      margin-top: 30px; }
+      .section-ofer .ofer-box .ofer-item h3 {
+        text-transform: uppercase;
+        font-size: 19px;
+        text-align: center;
+        font-weight: 600;
+        color: #7f8c8d; }
+      .section-ofer .ofer-box .ofer-item p {
+        line-height: 24px;
+        text-align: justify;
+        text-justify: inter-word; }
+    @media screen and (max-width: 1080px) {
+      .section-ofer .ofer-box .ofer-item {
+        flex-basis: 44%; } }
+    @media screen and (max-width: 700px) {
+      .section-ofer .ofer-box .ofer-item {
+        flex-basis: 100%; } }
