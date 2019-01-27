@@ -17,6 +17,7 @@
         color: #fff
         padding-bottom: 30px
     .projects
+        padding-top: 20px
         display: flex
         flex-direction: row
         flex-wrap: wrap
@@ -26,13 +27,16 @@
         overflow: hidden
         .projects-item
             flex-basis: 21%
-            padding-top: 15px
+            margin-top: 10px
             position: relative
             transition: .4s
             &:hover
-                transform: scale(1.2)
+                transform: scale(1.1)
+                z-index: 1
+                box-shadow: 0 0 0 2px white
             img 
                 width: 100%
+                height: auto
             .hover-text
                 position: absolute
                 bottom: 30%
