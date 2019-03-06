@@ -1,1 +1,14 @@
-This repository contains source code of my website. You cannot use any part of this code, but you can look into it. [Click here](https://choosealicense.com/no-license/) to read more about what you can do with this code.
+# Detailing Car
+
+> Simple static site using HTML5/CSS3/JS
+
+## LIVE
+
+- [Click](http://pawelturkot.pl/proj/03/)
+
+## Status
+Project is finished.
+
+### License
+
+MIT
